@@ -1,0 +1,197 @@
+/* General Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #fff;
+}
+
+/* Header and Navbar */
+header {
+    background-color: #1e1e1e; /* Dark background for the navbar */
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo i {
+    font-size: 2rem;
+    margin-right: 10px;
+    color: #00ffcc; /* Accent color for the logo */
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+nav {
+    float: right;
+}
+
+.navlinks {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navlinks li {
+    margin-left: 20px;
+}
+
+.navlinks li a {
+    text-decoration: none;
+    color: #ccc; /* Lighter color for the links */
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navlinks li a:hover {
+    background-color: #00ffcc; /* Hover effect with accent color */
+    color: #1e1e1e; /* Dark text on hover for contrast */
+}
+
+.togglebtn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    cursor: pointer;
+}
+
+.togglebtn span {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+/* Responsive Design for Navbar */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+
+    .togglebtn {
+        display: flex;
+    }
+
+    .navlinks.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #1e1e1e; /* Matching the dark background */
+        border-radius: 8px;
+        padding: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .navlinks li {
+        margin: 10px 0;
+    }
+}
+
+/* Container Styling for Achievements Section */
+.container {
+    margin-top: 100px; /* Adjusted for the fixed header */
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #00ffcc;
+    text-transform: uppercase;
+}
+
+/* Achievements Section */
+.certificates {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-y: auto;
+    max-height: 80vh;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 255, 204, 0.3);
+}
+
+.certificate {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 8px;
+    border: 2px solid #00ffcc;
+    box-shadow: 0 5px 15px rgba(0, 255, 204, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.certificate img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 3px solid #00ffcc;
+}
+
+.certificate p {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.certificate:hover {
+    transform: translateY(-10px);
+}
+
+/* Responsive Design for Certificates */
+@media (max-width: 768px) {
+    .certificates {
+        padding: 10px;
+    }
+
+    .certificate {
+        margin-bottom: 15px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .certificate p {
+        font-size: 1rem;
+    }
+
+    .certificate {
+        padding: 10px;
+    }
+}
